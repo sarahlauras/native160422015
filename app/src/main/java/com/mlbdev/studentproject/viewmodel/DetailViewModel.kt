@@ -17,6 +17,12 @@ class DetailViewModel(app:Application):AndroidViewModel(app) {
     val TAG = "volleyTag"
     private var queue: RequestQueue? = null
 
+    fun update(){
+        //diisi coding untuk simpan studentLD object ke server
+        //pake volley
+
+    }
+
     //copas dari list view jadi pakai volley trs ntar di find
     fun fetch(id:String){
         queue = Volley.newRequestQueue(getApplication())
@@ -48,4 +54,5 @@ class DetailViewModel(app:Application):AndroidViewModel(app) {
         stringRequest.tag = TAG
         queue?.add(stringRequest)
     }
+
 }
